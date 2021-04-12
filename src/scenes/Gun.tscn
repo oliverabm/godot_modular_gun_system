@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/scripts/gun_base.gd" type="Script" id=1]
+[ext_resource path="res://src/stats/example_stats.tres" type="Resource" id=2]
+[ext_resource path="res://src/scenes/Bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/example_gun_model.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://assets/gunshot3.wav" type="AudioStream" id=5]
+
+[node name="Gun" type="Spatial"]
+script = ExtResource( 1 )
+stats = ExtResource( 2 )
+bullet = ExtResource( 3 )
+fire_point = NodePath("FirePoint")
+
+[node name="FirePoint" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.288191, 2.51677 )
+
+[node name="example_gun_model" type="MeshInstance" parent="."]
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="GunshotAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 5 )
+unit_size = 6.0

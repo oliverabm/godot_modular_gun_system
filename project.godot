@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://src/scripts/bullet.gd"
+}, {
+"base": "Spatial",
+"class": "Gun",
+"language": "GDScript",
+"path": "res://src/scripts/gun_base.gd"
+}, {
+"base": "Resource",
+"class": "GunStats",
+"language": "GDScript",
+"path": "res://src/scripts/gun_stats.gd"
+} ]
+_global_script_class_icons={
+"Bullet": "",
+"Gun": "",
+"GunStats": ""
+}
+
+[application]
+
+config/name="Godot Modular Gun System"
+run/main_scene="res://src/levels/auto_shooting_gun.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

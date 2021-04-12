@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/Gun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scripts/gun_shooter.gd" type="Script" id=2]
+
+[node name="autoShootingScene" type="Spatial"]
+
+[node name="Camera1" type="Camera" parent="."]
+transform = Transform( 0.845476, -0.222715, 0.485354, 0, 0.90888, 0.417058, -0.534013, -0.352613, 0.768436, 4.786, 3.295, 5.986 )
+current = true
+
+[node name="CameraTop" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 10.0829, 0 )
+
+[node name="CameraSide" type="Camera" parent="."]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 10, 0, 0 )
+
+[node name="GunShooter" type="Spatial" parent="."]
+script = ExtResource( 2 )
+
+[node name="Gun" parent="GunShooter" instance=ExtResource( 1 )]

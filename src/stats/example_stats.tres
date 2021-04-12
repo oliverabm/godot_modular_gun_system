@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/scripts/gun_stats.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "gun"
+bullet_force = 20.0
+damage = 10
+fire_rate = 1.0
+spread_vector = Vector3( 0.1, 0.1, 0 )
+recoil = 0.2
