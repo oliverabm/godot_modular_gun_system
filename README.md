@@ -1,6 +1,6 @@
 # godot modular gun system
 
-A simple gun system i made for one of my projects in Godot.
+A simple gun system in 3d i made for one of my projects in Godot.
 
 The idea of it is to seperate the data of the gun from the functionality, so the functionality is in a spatial node
 while the stats of the gun like fire rate, name and bullet speed is stored in a seperate resource. The Gun node then uses those stats in it's logic.
