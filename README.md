@@ -1,4 +1,4 @@
-# godot_modular_gun_system
+# godot modular gun system
 
 A simple gun system i made for one of my projects in Godot.
 
